@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.db import Base, engine, get_db
 from app.models.item import Item as ItemModel
-from app.routers import gods_router, sessions_router, stats_router
+from app.routers import gods_router, preferences_router, sessions_router, stats_router
 from app.schemas.item import Item as ItemSchema
 
 
@@ -58,6 +58,7 @@ app.add_middleware(
 )
 
 app.include_router(gods_router)
+app.include_router(preferences_router)
 app.include_router(sessions_router)
 app.include_router(stats_router)
 

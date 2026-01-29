@@ -19,7 +19,7 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 from app.db import Base
-from app.models import god, session, user_stats  # Import all models for autogenerate
+from app.models import god, session, user_preferences, user_stats  # Import all models for autogenerate
 
 target_metadata = Base.metadata
 
