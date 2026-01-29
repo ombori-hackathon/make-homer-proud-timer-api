@@ -33,3 +33,14 @@ app/
 2. Create schemas in app/schemas/
 3. Create router in app/routers/
 4. Register router in app/main.py
+
+## Linting & Formatting
+- Linter: `uv run ruff check app/`
+- Format: `uv run ruff format app/`
+- Pre-commit: `uv run pre-commit run --all-files`
+
+## DAO Pattern
+This project uses DAOs (Data Access Objects) for database queries:
+- Models in `app/models/` - SQLAlchemy ORM definitions
+- DAOs in `app/daos/` - Query logic and business operations
+- Routers call DAOs, never query the database directly
